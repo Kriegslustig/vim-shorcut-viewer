@@ -1,5 +1,17 @@
+html {
+  font-family: caption, sans-serif;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 3.5rem;
+  font-size: 2rem;
+  display: inline-block;
 }
 
 .key-combination,
@@ -10,22 +22,15 @@
   overflow: hidden;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-}
-
-section > p {
-  line-height: 3.5rem;
-  font-size: 2rem;
-  display: inline-block;
-}
-
 .key {
   min-width: 3.5rem;
   height: 3.4rem;
   padding: .3rem;
   border-radius: .5rem;
   box-shadow: 0 0 .2rem #ccc;
+}
+
+.key-container {
+  padding: 0 .5rem;
 }
 

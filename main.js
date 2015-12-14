@@ -8,7 +8,7 @@ manual.getMap('https://raw.githubusercontent.com/Kriegslustig/vim-index-json/mas
     window.addEventListener('vimkey', (e) => {
       if(!e.detail.key) return
       keyView.updateKeys(keyContainer, e.detail.key)
-      resultContainer.textContent = (manual.getMan(man, mode.get(), e.detail.key.join('')) || '_')
+      resultContainer.textContent = manual.getMan(man, mode.get(), e.detail.key.join(''))
     })
   })
   .catch((err) => console.error(err))
