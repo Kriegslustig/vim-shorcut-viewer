@@ -1,3 +1,7 @@
+:root {
+  --key-width: 3.5rem;
+}
+
 html {
   font-family: caption, sans-serif;
 }
@@ -11,26 +15,37 @@ p {
   padding: 0;
   line-height: 3.5rem;
   font-size: 2rem;
-  display: inline-block;
 }
 
 .key-combination,
 .result {
   width: 100%;
-  height: 4rem;
+  height: calc(var(--key-width) + (var(--key-width) / 10 * 2));
   padding: .5rem;
   overflow: hidden;
+  display: block;
+}
+
+.key,
+.key-container {
+  display: inline-block;
 }
 
 .key {
-  min-width: 3.5rem;
-  height: 3.4rem;
-  padding: .3rem;
-  border-radius: .5rem;
-  box-shadow: 0 0 .2rem #ccc;
+  height: var(--key-width);
+  min-width: var(--key-width);
+  padding: calc(var(--key-width) / 10);
+  border-radius: calc(var(--key-width) / 10);
+  box-shadow: 0 0 calc(var(--key-width) / 10) #ccc;
 }
 
 .key-container {
-  padding: 0 .5rem;
+  padding: 0 calc(var(--key-width) / 10);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --key-width: 5rem
+  }
 }
 
